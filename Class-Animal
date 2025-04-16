@@ -1,0 +1,35 @@
+
+class Animal{
+  int valor;
+  String nome;
+  
+   Animal(this.valor,this.nome);
+  
+  void anuncio(){
+    print("Meu Valor: $valor, Meu Nome: $nome");
+  
+
+  }
+}
+
+class Gato extends Animal{
+  String cor;
+  
+  Gato(this.cor, int valor, String nome) : super(valor, nome);
+  void anuncioGato(){
+    print("Minha cor: $cor, Meu valor: $valor, Meu Nome: $nome");
+  }
+}
+
+
+void main(/*argumentos(regra de negócio)*/) {
+  //bloco de código
+  
+  Animal animal = Animal(1541, "Panturrilho");
+  animal.anuncio();
+  Animal animal2 = Animal(1542, "Bisteco");
+  animal2.anuncio();
+  
+  Gato gato = Gato("verde", 4800, "Júlio Balestrim");
+  gato.anuncioGato();
+}
